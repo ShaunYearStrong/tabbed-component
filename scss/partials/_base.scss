@@ -1,0 +1,19 @@
+/**
+ * _base.scss
+ * Basic setup styles
+ * Author: Shaun Dillon
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    color: $textColor;
+    line-height: 1.2;
+}
+
+ol {
+    list-style: decimal inside;
+}

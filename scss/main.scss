@@ -1,0 +1,19 @@
+/**
+ * main.scss
+ * Compiles all SCSS partials
+ * Author: Shaun Dillon
+ */
+
+// Modules - non compiling partials (variables, mixins, etc)
+@import "modules/colors"; // US spelling for consistency...
+@import "modules/sizes";
+
+@import "vendors/reset"; // I didn't write this, but it needs to go first
+
+// Partials - compiling partials
+@import "partials/base";
+@import "partials/buttons";
+@import "partials/tab-widget";
+
+// Vendors - 3rd party stuff
+@import "vendors/zones"; // The guardian's own zone colours

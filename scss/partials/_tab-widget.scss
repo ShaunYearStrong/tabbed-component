@@ -1,0 +1,55 @@
+/**
+ * _tab-widget.scss
+ * Author: Shaun Dillon
+ */
+
+.tab-widget {
+
+    &__nav {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        border: 1px solid $boxBorder;
+        font-family: Georgia, "Times new roman", serif;
+        font-size: $textSizeLarge;
+
+        &-item {
+            display: table-cell;
+            border-right: 1px solid $boxBorder;
+
+            &:last-child {
+                border: none;
+            }
+        }
+
+        &-button {
+            background: $boxBackground;
+
+            &:hover {
+                background: darken($boxBackground, 5);
+            }
+        }
+    }
+
+    &__content {
+        background: $boxBackground;
+        border: {
+            left: 1px solid $boxBorder;
+            right: 1px solid $boxBorder;
+            bottom: 1px solid $boxBorder;
+        }
+    }
+
+    &__list-item {
+        padding: $baseline;
+
+        &-link {
+            color: $linkColor;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
