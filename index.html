@@ -1,27 +1,32 @@
-<div class="tab-widget js-tab-widget">
-    <!-- Navigation -->
-    <ul class="tab-widget__nav">
-        <li class="tab-widget__nav-item zone-news">
-            <!-- Using buttons for semantics/a11y -->
-            <a class="tab-widget__nav-button button button--full-size zone-color" data-section="uk-news">UK news</a>
-        </li>
-        <li class="tab-widget__nav-item zone-sport">
-            <a class="tab-widget__nav-button button button--full-size zone-color" data-section="football">Football</a>
-        </li>
-        <li class="tab-widget__nav-item zone-travel">
-            <a class="tab-widget__nav-button button button--full-size zone-color" data-section="travel">Travel</a>
-        </li>
-    </ul>
-
-    <!-- Content -->
-    <div class="tab-widget__content">
-        <ol class="tab-widget__list">
-            <li class="tab-widget__list-item">
-                <a href="#" class="tab-widget__list-item-link"> This is an item, hear it roar!</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabbing</title>
+</head>
+<body>
+    <div class="tab-widget js-tab-widget">
+        <!-- Navigation -->
+        <ul class="tab-widget__nav">
+            <li class="tab-widget__nav-item zone-news">
+                <!-- Using buttons for semantics/a11y -->
+                <a class="tab-widget__nav-button--active tab-widget__nav-button button button--full-size zone-color js-tab-widget__nav-button" data-section="uk-news">UK news</a>
             </li>
-        </ol>
+            <li class="tab-widget__nav-item zone-sport">
+                <a class="tab-widget__nav-button button button--full-size zone-color js-tab-widget__nav-button" data-section="football">Football</a>
+            </li>
+            <li class="tab-widget__nav-item zone-travel">
+                <a class="tab-widget__nav-button button button--full-size zone-color js-tab-widget__nav-button" data-section="travel">Travel</a>
+            </li>
+        </ul>
+
+        <!-- Content -->
+        <div class="tab-widget__content js-tab-widget__content">
+            <p class="tab-widget__note">Loading...</p>
+        </div>
+
     </div>
-
-</div>
-
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

@@ -6,16 +6,23 @@
 .tab-widget {
 
     &__nav {
-        display: table;
-        table-layout: fixed;
-        width: 100%;
         border: 1px solid $boxBorder;
         font-family: Georgia, "Times new roman", serif;
         font-size: $textSizeLarge;
 
+        @media all and (min-width: 350px) {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
         &-item {
-            display: table-cell;
-            border-right: 1px solid $boxBorder;
+
+            @media all and (min-width: 350px) {
+                display: table-cell;
+                vertical-align: middle;
+                border-right: 1px solid $boxBorder;
+            }
 
             &:last-child {
                 border: none;
@@ -23,10 +30,17 @@
         }
 
         &-button {
-            background: $boxBackground;
 
-            &:hover {
+            &:not(.tab-widget__nav-button--active) {
                 background: darken($boxBackground, 5);
+
+                &:hover {
+                    background: darken($boxBackground, 10);
+                }
+            }
+
+            &--active {
+                background: $boxBackground;
             }
         }
     }
@@ -40,8 +54,17 @@
         }
     }
 
+    &__note {
+        color: $black;
+        margin: $baseline;
+    }
+
     &__list-item {
         padding: $baseline;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $boxBorder;
+        }
 
         &-link {
             color: $linkColor;

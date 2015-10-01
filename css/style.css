@@ -94,21 +94,27 @@ ol {
  * Author: Shaun Dillon
  */
 .tab-widget__nav {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
   border: 1px solid #EEEEEE;
   font-family: Georgia, "Times new roman", serif;
   font-size: 18px; }
-  .tab-widget__nav-item {
-    display: table-cell;
-    border-right: 1px solid #EEEEEE; }
-    .tab-widget__nav-item:last-child {
-      border: none; }
-  .tab-widget__nav-button {
+  @media all and (min-width: 350px) {
+    .tab-widget__nav {
+      display: table;
+      table-layout: fixed;
+      width: 100%; } }
+  @media all and (min-width: 350px) {
+    .tab-widget__nav-item {
+      display: table-cell;
+      vertical-align: middle;
+      border-right: 1px solid #EEEEEE; } }
+  .tab-widget__nav-item:last-child {
+    border: none; }
+  .tab-widget__nav-button:not(.tab-widget__nav-button--active) {
+    background: #f2f2f2; }
+    .tab-widget__nav-button:not(.tab-widget__nav-button--active):hover {
+      background: #e6e6e6; }
+  .tab-widget__nav-button--active {
     background: #FFFFFF; }
-    .tab-widget__nav-button:hover {
-      background: #f2f2f2; }
 
 .tab-widget__content {
   background: #FFFFFF;
@@ -116,8 +122,14 @@ ol {
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE; }
 
+.tab-widget__note {
+  color: #333333;
+  margin: 15px; }
+
 .tab-widget__list-item {
   padding: 15px; }
+  .tab-widget__list-item:not(:last-child) {
+    border-bottom: 1px solid #EEEEEE; }
   .tab-widget__list-item-link {
     color: #005689;
     text-decoration: underline; }
